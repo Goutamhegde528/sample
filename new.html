@@ -1,0 +1,280 @@
+<Doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>try</title>
+
+<script type="text/javascript">
+
+
+
+function show()
+{
+document.getElementById('table').style.visibility = "visible";
+}
+function hide(){
+document.getElementById('table').style.visibility = "hidden";
+}
+function DC()
+{
+
+  
+  var a = document.getElementById("DSA");
+  
+  var  b= document.getElementById("COA");
+var  c= document.getElementById("GTLA");
+var  d= document.getElementById("POCD");
+
+  var x= document.getElementById("DSA").value;
+var y=document.getElementById("COA").value;
+var x1= document.getElementById("GTLA").value;
+var y1= document.getElementById("POCD").value;
+ if (a.checked == true && b.checked==true && c.checked==true && d.checked==true){
+document.write("<center>");
+document.write("<h1>Selected books</h1>");
+  document.write("1-", x);
+ document.write("<br>");
+ document.write("2-", y);
+ document.write("<br>");
+ document.write("3-", x1);
+ document.write("<br>");
+ document.write("4-:", y1);
+document.write("</center>");
+  }
+ else if( a.checked == true && b.checked==true && c.checked==true)
+{
+document.write("<center>");
+document.write("<h1>Selected books</h1>");
+  document.write("1-", x);
+ document.write("<br>");
+ document.write("2-", y);
+ document.write("<br>");
+ document.write("3-", x1);
+document.write("</center>");
+}
+else if(a.checked == true && b.checked==true && d.checked==true)
+{
+
+document.write("<center>");
+document.write("<h1>Selected books</h1>");
+  document.write("1-", x);
+ document.write("<br>");
+ document.write("2-", y);
+ document.write("<br>");
+
+ document.write("3-", y1);
+document.write("</center>");
+}
+else if(b.checked == true && c.checked==true && d.checked==true)
+{
+
+document.write("<center>");
+  document.write("<h1>Selected books</h1>");
+ document.write("1-", y);
+ document.write("<br>");
+ document.write("2-", x1);
+ document.write("<br>");
+ document.write("3-", y1);
+document.write("</center>");
+}
+else if(a.checked == true && c.checked==true && d.checked==true)
+{
+
+document.write("<center>");
+document.write("<h1>Selected books</h1>");
+  document.write("1-", x);
+ document.write("<br>");
+
+ document.write("2-", x1);
+ document.write("<br>");
+ document.write("3-", y1);
+document.write("</center>");
+}
+else if(a.checked==true && b.checked==true)
+{
+
+document.write("<center>");
+document.write("<h1>Selected books</h1>");
+  document.write("1-", x);
+ document.write("<br>");
+ document.write("2-", y);
+ 
+document.write("</center>");
+}
+else if(b.checked==true && c.checked==true)
+{
+
+document.write("<center>");
+  document.write("<h1>Selected books</h1>");
+ document.write("1-", y);
+ document.write("<br>");
+ document.write("2-", x1);
+ 
+document.write("</center>");
+}
+else if(c.checked==true && d.checked==true)
+{
+document.write("<center>");
+ document.write("<h1>Selected books</h1>");
+ document.write("1-", x1);
+ document.write("<br>");
+ document.write("2-", y1);
+document.write("</center>");
+}
+else if(d.checked==true && a.checked==true)
+{
+document.write("<center>");
+document.write("<h1>Selected books</h1>");
+  document.write("1-", x);
+ document.write("<br>");
+ 
+ document.write("2-", y1);
+document.write("</center>");
+}
+else if(a.checked==true && c.checked==true)
+{
+document.write("<center>");
+document.write("<h1>Selected books</h1>");
+  document.write("1-", x);
+ document.write("<br>");
+ 
+ document.write("2-", x1);
+
+document.write("</center>");
+}
+else if(b.checked==true && d.checked==true)
+{
+document.write("<center>");
+document.write("<h1>Selected books</h1>");
+  
+ document.write("1-", y);
+ document.write("<br>");
+ 
+ document.write("2-", y1);
+document.write("</center>");
+}
+else if(a.checked==true )
+{
+document.write("<center>");
+document.write("<h1>Selected books</h1>");
+  document.write("1-", x);
+ 
+document.write("</center>");
+}
+else if(b.checked==true)
+{
+document.write("<center>");
+  document.write("<h1>Selected books</h1>");
+ document.write("1-", y);
+ 
+document.write("</center>");
+}
+else if(c.checked==true)
+{
+document.write("<center>");
+ document.write("<h1>Selected books</h1>");
+ document.write("1-", x1);
+
+document.write("</center>");
+}
+else if(d.checked==true)
+{
+document.write("<center>");
+document.write("<h1>Selected books</h1>");
+ document.write("1-", y1);
+document.write("</center>");
+}
+
+
+else
+{
+document.write("<center>");
+document.write("No book is selected");
+document.write("</center>");
+}
+}
+
+ 
+</script>
+<style>
+ table,th,td
+    {
+      border:1px solid black;
+    }
+    table
+    {
+      border-collapse:collapse;
+      width:20%;
+    }
+    td
+    {
+      height:40px;
+    }
+    tr
+    {
+text-align:center;
+      background-color:green;
+      color:white;
+    }
+    th
+    {
+      text-align:center;
+      background-color:yellow;
+      color:black;
+    }
+</style>
+</head>
+<body onload="hide()" style="background-color:#E3E3E3">
+
+<center>
+<div class="c1">
+<input type ="button" value="Displaybooks" onClick="show()"><br><br>
+</div>
+</center>
+<table  id='table' border=1 style="width:100%">
+ 
+<tr>
+<th>Semester</th>
+<th>Book_name</th>
+<th>ISBN number</th>
+<th>Mark</th>
+
+</tr>
+<tr>
+
+<td>3</td>
+<td>DSA</td>
+<td>12353732829</td>
+
+
+<td><input type="checkbox" id="DSA" name="DSA" value="DSA"></td>
+
+</tr>
+<tr>
+<td>3</td>
+<td>COA</td>
+<td>2383939399</td>
+<td><input type="checkbox" id="COA" name="DSA" value="COA"></td>
+
+</tr>
+<tr>
+<td>3</td>
+<td>GTLA</td>
+<td>238393945</td>
+<td><input type="checkbox" id="GTLA" name="GTLA" value="GTLA"></td>
+
+</tr>
+<tr>
+<td>3</td>
+<td>POCD</td>
+<td>2384949499</td>
+<td><input type="checkbox" id="POCD" name="POCD" value="POCD"></td>
+
+</tr>
+
+</table><br><br>
+<center>
+<input type="button" value="List" onClick="DC()">  
+</center>
+</body>
+</html>
