@@ -1,0 +1,121 @@
+<Doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="styling.css">
+<title>try</title>
+
+<script type="text/javascript">
+var it1,n,n1,x,it2,it3,it4,n2,n3;
+function Bill()
+{
+it1=document.myform.it1.value;
+n=it1*100;
+it2=document.myform1.it2.value;
+n1=it2*200;
+it3=document.myform2.it3.value;
+n2=it3*300;
+it4=document.myform3.it4.value;
+n3=it4*400;
+x=n1+n+n2+n3;
+document.write("<background-color:pink><center> The bill is rupees ", x);
+
+
+}
+function show()
+{
+document.getElementById('table').style.visibility = "visible";
+}
+function hide(){
+document.getElementById('table').style.visibility = "hidden";
+}
+</script>
+</head>
+<body onload="hide()">
+<style>
+* {
+  font-family: sans-serif; /* Change your font family */
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+</style>
+<center>
+<div class="c1">
+<button type ="button" onClick="show()">Display</button>
+</div>
+</center>
+<table class="content-table" id='table' border=1 style="width:100%">
+ <thead>
+<tr>
+<th>items</th>
+<th>price</th>
+<th>Enter quantity</th>
+</tr>
+<tr>
+</thead>
+<tbody>
+<td>item1</td>
+<td>100</td>
+
+
+<td><center><form name="myform"><input type="number" id="it1" min="0" value=""></form></center></td>
+
+</tr>
+<tr>
+<td>item2</td>
+<td>200</td>
+<td><form name="myform1"><input type="number" id="it2" min="0" value=""></form></td>
+</tr>
+<tr class="active-row">
+<td>item3</td>
+<td>300</td>
+<td><form name="myform2"><input type="number" id="it3"  min="0" value=""></form></td>
+</tr>
+<tr>
+<td>item4</td>
+<td>400</td>
+<td><form name="myform3"><input type="number" id="it4" min="0" value=""></form></td>
+</tr>
+</tbody>
+</table>
+<center>
+<input type="button" value="Bill" onClick="Bill()">
+</center>
+</body>
+</html>
